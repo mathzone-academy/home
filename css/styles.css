@@ -7,21 +7,24 @@ body {
     color: #1A202C;
 }
 
-/* Header */
+/* Header - asegura que el logo y el menú se alineen bien */
 header {
     display: flex;
-    align-items: center;
+    align-items: center;      /* centra verticalmente logo y nav */
     justify-content: space-between;
-    background-color: #4C1D95; /* Morado principal */
+    background-color: #4C1D95; /* morado principal */
     color: white;
-    padding: 20px 40px;
+    padding: 30px 40px;       /* más espacio para el logo */
 }
 
-.logo {
-    width: 300px; /* Ajusta tamaño del logo */
-    height: auto;
+/* Logo del header - alto proporcional y centrado */
+header .logo {
+    height: 150px;   /* alto visible en el header */
+    width: auto;     /* mantiene la proporción */
+    display: block;
 }
 
+/* Navegación */
 nav a {
     color: #E9D8FD; /* Morado claro */
     text-decoration: none;
@@ -71,7 +74,8 @@ main.home p {
 .btn:hover {
     background-color: #805AD5; /* Morado más claro al pasar el mouse */
 }
-/* Centrar el contenido principal */
+
+/* Centrar el contenido principal de profesores */
 main.profesores {
     text-align: center;      /* centra texto y botones */
     max-width: 800px;        /* limita ancho */
@@ -79,26 +83,12 @@ main.profesores {
     padding: 20px;
 }
 
-/* Logo del header - alto proporcional y centrado */
-header .logo {
-    height: 100px;   /* alto visible en el header */
-    width: auto;     /* mantiene la proporción */
-    display: block;
-}
-
-/* Header - asegura que el logo y el menú se alineen bien */
-header {
-    display: flex;
-    align-items: center;      /* centra verticalmente logo y nav */
-    justify-content: space-between;
-    background-color: #4C1D95; /* morado */
-    padding: 20px 40px;
-}
-
 /* Botones de cursos */
 .recursos .btn {
     margin: 10px 5px;       /* separa los botones */
 }
+
+/* Contenedores de estudiantes */
 .students-container {
     text-align: center;
     padding: 40px 20px;
@@ -134,4 +124,25 @@ header {
 .student-box:hover {
     background-color: #4A148C;
     transform: translateY(-4px);
+}
+
+/* Ajustes responsivos para móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;   /* logo arriba, nav debajo */
+        align-items: center;
+        padding: 20px;
+    }
+
+    header .logo {
+        height: 100px; /* se reduce en móviles */
+    }
+
+    nav a {
+        margin: 10px; /* más espacio entre enlaces */
+    }
+
+    .students-grid {
+        grid-template-columns: 1fr; /* una columna en móviles */
+    }
 }
