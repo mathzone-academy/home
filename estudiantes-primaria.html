@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primaria - Mathzone</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Estilos del despliegue */
+        .toggle-box {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .toggle-content {
+            display: none;
+            margin-top: 15px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .toggle-content ul {
+            list-style-type: disc;
+        }
+    </style>
+
+    <script>
+        function toggleSection(id) {
+            const box = document.getElementById(id);
+
+            if (box.style.display === "none" || box.style.display === "") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+    </script>
+
 </head>
 <body>
 
@@ -23,25 +55,32 @@
     <main class="students-container">
         <h1>Primaria</h1>
 
-        <!-- Beneficios -->
         <div class="students-grid">
-            <div class="student-box">
+
+            <!-- BENEFICIOS -->
+            <div class="student-box toggle-box" onclick="toggleSection('beneficios')">
                 <h3>Beneficios</h3>
-                <ul style="text-align: left; list-style-type: disc; padding-left: 20px;">
+            </div>
+
+            <div id="beneficios" class="toggle-content">
+                <ul>
                     <li>Enseñanza de calidad en matemáticas</li>
                     <li>Clases 100% virtuales</li>
                     <li>Precio: S/40 mensual</li>
-                    <li>Descuentos si se unen más de 2 alumnos</li>
+                    <li>Descuento si se unen más de 2 alumnos</li>
                     <li>Material de apoyo en PDF y libros digitales</li>
                     <li>Ejercicios prácticos y evaluaciones cortas</li>
                     <li>Comunidad de apoyo para resolver dudas</li>
                 </ul>
             </div>
 
-            <!-- Cursos -->
-            <div class="student-box">
+            <!-- CURSOS -->
+            <div class="student-box toggle-box" onclick="toggleSection('cursos')">
                 <h3>Cursos</h3>
-                <ul style="text-align: left; list-style-type: disc; padding-left: 20px;">
+            </div>
+
+            <div id="cursos" class="toggle-content">
+                <ul>
                     <li>Álgebra</li>
                     <li>Aritmética</li>
                     <li>Razonamiento Matemático</li>
@@ -49,15 +88,16 @@
                 </ul>
             </div>
 
-            <!-- Unirse a la Comunidad -->
+            <!-- UNIRSE A LA COMUNIDAD -->
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfud3xRamxsTojXNbLsbulW5ITSYCTY_ZpUhkfwnCISrWDmZw/viewform?usp=header"
                class="student-box"
                target="_blank">
                 Unirse a la Comunidad
             </a>
 
-            <!-- Reglamento -->
+            <!-- REGLAMENTO -->
             <a href="images/reglamento.pdf" class="student-box" target="_blank">Reglamento</a>
+
         </div>
     </main>
 
