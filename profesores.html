@@ -23,7 +23,7 @@
         <nav>
             <a href="index.html">Inicio</a>
             <a href="estudiantes.html">Estudiantes</a>
-            <a href="profesores.html" class="active">Profesores</a>
+            <a href="profesores.html">Profesores</a>
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
@@ -33,16 +33,12 @@
         <h1>Área de Profesores</h1>
         <p>Bienvenido, profesor de Mathzone. Aquí encontrará todos los recursos necesarios para sus clases.</p>
 
-        <section class="cursos">
-            <h2>Cursos</h2>
+        <section class="recursos">
+            <h2>Recursos</h2>
 
-            <!-- Botones de cursos tipo student-box para uniformidad -->
-            <div class="students-grid">
-                <div class="student-box" onclick="mostrarTemas('secundaria')">Secundaria</div>
-                <div class="student-box" onclick="mostrarTemas('primaria')">Primaria</div>
-            </div>
-
-            <ul id="secundaria" class="temas" style="display:none; margin-top: 10px;">
+            <!-- Botón Secundaria -->
+            <button class="btn" onclick="mostrarTemas('secundaria')">Secundaria</button>
+            <ul id="secundaria" class="temas" style="display:none;">
                 <li>Álgebra</li>
                 <li>Aritmética</li>
                 <li>Razonamiento Matemático</li>
@@ -50,7 +46,9 @@
                 <li>Geometría</li>
             </ul>
 
-            <ul id="primaria" class="temas" style="display:none; margin-top: 10px;">
+            <!-- Botón Primaria -->
+            <button class="btn" onclick="mostrarTemas('primaria')">Primaria</button>
+            <ul id="primaria" class="temas" style="display:none;">
                 <li>Álgebra</li>
                 <li>Aritmética</li>
                 <li>Razonamiento Matemático</li>
@@ -60,7 +58,7 @@
 
         <section class="contacto">
             <h2>Contacto</h2>
-            <p>Correo: <a href="mailto:academiamathzone@gmail.com">academiamathzone@gmail.com</a></p>
+            <p>Correo: academiamathzone@gmail.com</p>
             <p>Instagram: <a href="https://www.instagram.com/academia_mathzone" target="_blank">@academia_mathzone</a></p>
         </section>
     </main>
