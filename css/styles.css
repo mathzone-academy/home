@@ -157,3 +157,20 @@ main.profesores {
 .temas li {
     margin: 5px 0;               /* espacio entre items */
 }
+.students-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.student-box-wrapper {
+    text-align: center;
+}
+
+.dropdown-list {
+    display: none;
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
