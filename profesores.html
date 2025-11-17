@@ -19,14 +19,14 @@
 
     <!-- Header -->
     <header>
-    <img src="images/logo mathzone 2.png" alt="Logo Mathzone" class="logo">
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="estudiantes.html">Estudiantes</a>
-        <a href="profesores.html">Profesores</a>
-        <a href="contacto.html" class="active">Contacto</a>
-    </nav>
-</header>
+        <img src="images/logo mathzone 2.png" alt="Logo Mathzone" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="estudiantes.html">Estudiantes</a>
+            <a href="profesores.html" class="active">Profesores</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
 
     <!-- Contenido principal -->
     <main class="profesores">
@@ -36,9 +36,13 @@
         <section class="recursos">
             <h2>Recursos</h2>
 
-            <!-- Botón Secundaria -->
-            <button class="btn" onclick="mostrarTemas('secundaria')">Secundaria</button>
-            <ul id="secundaria" class="temas" style="display:none;">
+            <!-- Botones de cursos tipo student-box para uniformidad -->
+            <div class="students-grid">
+                <div class="student-box" onclick="mostrarTemas('secundaria')">Secundaria</div>
+                <div class="student-box" onclick="mostrarTemas('primaria')">Primaria</div>
+            </div>
+
+            <ul id="secundaria" class="temas" style="display:none; margin-top: 10px;">
                 <li>Álgebra</li>
                 <li>Aritmética</li>
                 <li>Razonamiento Matemático</li>
@@ -46,9 +50,7 @@
                 <li>Geometría</li>
             </ul>
 
-            <!-- Botón Primaria -->
-            <button class="btn" onclick="mostrarTemas('primaria')">Primaria</button>
-            <ul id="primaria" class="temas" style="display:none;">
+            <ul id="primaria" class="temas" style="display:none; margin-top: 10px;">
                 <li>Álgebra</li>
                 <li>Aritmética</li>
                 <li>Razonamiento Matemático</li>
@@ -58,7 +60,7 @@
 
         <section class="contacto">
             <h2>Contacto</h2>
-            <p>Correo: academiamathzone@gmail.com</p>
+            <p>Correo: <a href="mailto:academiamathzone@gmail.com">academiamathzone@gmail.com</a></p>
             <p>Instagram: <a href="https://www.instagram.com/academia_mathzone" target="_blank">@academia_mathzone</a></p>
         </section>
     </main>
