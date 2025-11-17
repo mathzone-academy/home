@@ -3,16 +3,18 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #F7F7F7;
+    color: #1A202C;
 }
 
 header {
-    background-color: #1E3A8A;
+    background-color: #6B46C1; /* morado principal */
     color: white;
     padding: 20px 0;
 }
 
 a {
-    color: #3B82F6;
+    color: #9F7AEA; /* morado claro */
     text-decoration: none;
     margin: 0 10px;
 }
