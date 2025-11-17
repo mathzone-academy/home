@@ -11,13 +11,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #6B46C1; /* morado principal */
+    background-color: #A45EE5; /* morado principal */
     color: white;
     padding: 20px;
 }
 
 a {
-    color: #9F7AEA; /* morado claro */
+    color: #710193; /* morado claro */
     text-decoration: none;
     margin-left: 20px;
 }
