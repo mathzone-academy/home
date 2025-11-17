@@ -13,7 +13,7 @@
 
         if(userPassword !== password){
             alert("Contraseña incorrecta. Redirigiendo al inicio.");
-            window.location.href = "index.html"; // redirige si es incorrecta
+            window.location.href = "index.html";
         }
     </script>
 
@@ -23,7 +23,7 @@
         <nav>
             <a href="index.html">Inicio</a>
             <a href="estudiantes.html">Estudiantes</a>
-            <a href="profesores.html">Profesores</a>
+            <a href="profesores.html" class="active">Profesores</a>
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
@@ -33,38 +33,59 @@
         <h1>Área de Profesores</h1>
         <p>Bienvenido, profesor de Mathzone. Aquí encontrará todos los recursos necesarios para sus clases.</p>
 
-        <section class="recursos">
-            <h2>Recursos</h2>
-
-            <!-- Botón Secundaria -->
-            <button class="btn" onclick="mostrarTemas('secundaria')">Secundaria</button>
-            <ul id="secundaria" class="temas" style="display:none;">
-                <li>Álgebra</li>
-                <li>Aritmética</li>
-                <li>Razonamiento Matemático</li>
-                <li>Trigonometría</li>
-                <li>Geometría</li>
+        <!-- Botón Primaria -->
+        <button class="btn" onclick="mostrarCursos('primaria-cursos')">Primaria</button>
+        <div id="primaria-cursos" style="display:none; margin-top:20px;">
+            <!-- Cursos de primaria -->
+            <button class="btn" onclick="mostrarTemas('algebra')">Álgebra</button>
+            <ul id="algebra" class="temas" style="display:none;">
+                <li>Encuentra El Número</li>
+                <li>¿Qué Valor Tiene? I</li>
+                <li>¿Qué Valor Tiene? II</li>
+                <li>Remplaza El Valor</li>
+                <li>Introducción A Las Ecuaciones</li>
+                <li>... resto de temas ...</li>
             </ul>
 
-            <!-- Botón Primaria -->
-            <button class="btn" onclick="mostrarTemas('primaria')">Primaria</button>
-            <ul id="primaria" class="temas" style="display:none;">
-                <li>Álgebra</li>
-                <li>Aritmética</li>
-                <li>Razonamiento Matemático</li>
-                <li>Geometría</li>
+            <button class="btn" onclick="mostrarTemas('aritmetica')">Aritmética</button>
+            <ul id="aritmetica" class="temas" style="display:none;">
+                <li>Conteo, Lectura y Escritura de Números</li>
+                <li>Valor Posicional (Unidades, Decenas y Centenas)</li>
+                <li>Comparación de Números</li>
+                <li>Composición y Descomposición de Números</li>
+                <li>... resto de temas ...</li>
             </ul>
-        </section>
 
-        <section class="contacto">
-            <h2>Contacto</h2>
-            <p>Correo: academiamathzone@gmail.com</p>
-            <p>Instagram: <a href="https://www.instagram.com/academia_mathzone" target="_blank">@academia_mathzone</a></p>
-        </section>
+            <button class="btn" onclick="mostrarTemas('rm')">Razonamiento Matemático</button>
+            <ul id="rm" class="temas" style="display:none;">
+                <li>Noción de Conjuntos I</li>
+                <li>Noción de Conjuntos II</li>
+                <li>Clases De Conjuntos</li>
+                <li>Operaciones con Conjuntos: Unión e Intersección</li>
+                <li>... resto de temas ...</li>
+            </ul>
+
+            <button class="btn" onclick="mostrarTemas('geometria')">Geometría</button>
+            <ul id="geometria" class="temas" style="display:none;">
+                <li>El Punto</li>
+                <li>La Línea</li>
+                <li>El Segmento</li>
+                <li>Líneas Paralelas</li>
+                <li>Líneas Perpendiculares</li>
+                <li>... resto de temas ...</li>
+            </ul>
+        </div>
     </main>
 
-    <!-- Script para mostrar/ocultar temas -->
+    <!-- Scripts -->
     <script>
+        // Muestra/oculta los cursos
+        function mostrarCursos(id) {
+            const cursos = document.getElementById(id);
+            cursos.style.display = cursos.style.display === "none" ? "block" : "none";
+        }
+
+        // Muestra/oculta los temas de cada curso
         function mostrarTemas(id) {
             const lista = document.getElementById(id);
             lista.style.display = lista.style.display === "none" ? "block" : "none";
