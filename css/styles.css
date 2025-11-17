@@ -79,12 +79,20 @@ main.profesores {
     padding: 20px;
 }
 
-/* Logo del header */
+/* Logo del header - alto proporcional y centrado */
 header .logo {
-    width: 150px;           /* tamaño del logo */
-    height: auto;
-    display: block;         /* para poder centrarlo si quieres */
-    margin: 0 auto;         /* centra logo horizontalmente */
+    height: 100px;   /* alto visible en el header */
+    width: auto;     /* mantiene la proporción */
+    display: block;
+}
+
+/* Header - asegura que el logo y el menú se alineen bien */
+header {
+    display: flex;
+    align-items: center;      /* centra verticalmente logo y nav */
+    justify-content: space-between;
+    background-color: #4C1D95; /* morado */
+    padding: 20px 40px;
 }
 
 /* Botones de cursos */
