@@ -6,12 +6,69 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Verificación de contraseña -->
+    <script>
+        const password = "PROFESOR2025"; // define tu contraseña
+        const userPassword = prompt("Ingrese la contraseña de profesores:");
+
+        if(userPassword !== password){
+            alert("Contraseña incorrecta. Redirigiendo al inicio.");
+            window.location.href = "index.html"; // redirige si es incorrecta
+        }
+    </script>
+
+    <!-- Header -->
     <header>
-        <h1>Área de Profesores</h1>
-        <a href="index.html">Volver al inicio</a>
+        <img src="images/logo-mathzone-2.png" alt="Logo Mathzone" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="profesores.html">Profesores</a>
+            <a href="estudiantes.html">Estudiantes</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
     </header>
-    <main>
-        <p>Recursos y herramientas para docentes.</p>
+
+    <!-- Contenido principal -->
+    <main class="profesores">
+        <h1>Área de Profesores</h1>
+        <p>Bienvenido, profesor de Mathzone. Aquí encontrará todos los recursos necesarios para sus clases.</p>
+
+        <section class="recursos">
+            <h2>Recursos</h2>
+
+            <!-- Botón Secundaria -->
+            <button class="btn" onclick="mostrarTemas('secundaria')">Secundaria</button>
+            <ul id="secundaria" class="temas" style="display:none;">
+                <li>Álgebra</li>
+                <li>Aritmética</li>
+                <li>Razonamiento Matemático</li>
+                <li>Trigonometría</li>
+                <li>Geometría</li>
+            </ul>
+
+            <!-- Botón Primaria -->
+            <button class="btn" onclick="mostrarTemas('primaria')">Primaria</button>
+            <ul id="primaria" class="temas" style="display:none;">
+                <li>Álgebra</li>
+                <li>Aritmética</li>
+                <li>Razonamiento Matemático</li>
+                <li>Geometría</li>
+            </ul>
+        </section>
+
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <p>Correo: contacto@mathzone.com</p>
+            <p>Instagram: @mathzone</p>
+        </section>
     </main>
+
+    <!-- Script para mostrar/ocultar temas -->
+    <script>
+        function mostrarTemas(id) {
+            const lista = document.getElementById(id);
+            lista.style.display = lista.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
