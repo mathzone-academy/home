@@ -146,3 +146,14 @@ main.profesores {
         grid-template-columns: 1fr; /* una columna en móviles */
     }
 }
+.temas {
+    list-style-position: inside; /* las viñetas quedan cerca del texto */
+    padding: 0;                  /* elimina padding predeterminado */
+    margin: 10px auto;           /* centra la lista */
+    text-align: left;            /* texto alineado a la izquierda dentro de la lista */
+    max-width: 800px;            /* opcional: limita ancho */
+}
+
+.temas li {
+    margin: 5px 0;               /* espacio entre items */
+}
