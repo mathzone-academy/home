@@ -2,87 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudiantes - Mathzone</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <h1>Área de Estudiantes</h1>
-        <a href="index.html">Volver al inicio</a>
+        <img src="logo mathzone 2.png" alt="Logo Mathzone" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="estudiantes.html" class="active">Estudiantes</a>
+            <a href="profesores.html">Profesores</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
     </header>
-   <main class="estudiantes">
-    <h1>Estudiantes</h1>
 
-    <!-- Botón para ver el reglamento -->
-    <a href="img/reglamento.pdf" target="_blank" class="boton">Ver Reglamento (PDF)</a>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="students-container">
+        <h1>Estudiantes</h1>
 
-    <!-- Botones principales -->
-    <div class="botones-estudiantes">
-        <button onclick="mostrarPrimaria()">Primaria</button>
-        <button onclick="mostrarSecundaria()">Secundaria</button>
-        <button onclick="mostrarComunidad()">Únete a la comunidad</button>
-    </div>
+        <div class="students-grid">
+            <a href="primaria.html" class="student-box">Primaria</a>
+            <a href="secundaria.html" class="student-box">Secundaria</a>
+            <a href="comunidad.html" class="student-box">Unirse a la Comunidad</a>
+            <a href="reglamento.pdf" class="student-box" target="_blank">Reglamento</a>
+        </div>
+    </main>
 
-    <!-- Contenedor donde se mostrará el contenido -->
-    <section id="contenido-estudiantes"></section>
-</main>
-
-<script>
-    function mostrarPrimaria() {
-        document.getElementById("contenido-estudiantes").innerHTML = `
-            <h2>Primaria</h2>
-            <p>Selecciona tu curso:</p>
-            <ul>
-                <li>Aritmética</li>
-                <li>Álgebra básica</li>
-                <li>Razonamiento Matemático</li>
-                <li>Geometría</li>
-            </ul>
-        `;
-    }
-
-    function mostrarSecundaria() {
-        document.getElementById("contenido-estudiantes").innerHTML = `
-            <h2>Secundaria</h2>
-            <p>Selecciona tu curso:</p>
-            <ul>
-                <li>Álgebra</li>
-                <li>Aritmética</li>
-                <li>Geometría</li>
-                <li>Trigonometría</li>
-                <li>Razonamiento Matemático</li>
-            </ul>
-        `;
-    }
-
-    function mostrarComunidad() {
-        document.getElementById("contenido-estudiantes").innerHTML = `
-            <h2>Únete a la Comunidad</h2>
-            <p>Pronto habilitaremos un formulario para unirte a Mathzone.</p>
-        `;
-    }
-</script>
-
-<style>
-    .estudiantes {
-        text-align: center;
-    }
-    .boton {
-        display: inline-block;
-        margin: 10px;
-        padding: 12px 20px;
-        background: #4F46E5;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-    }
-    .botones-estudiantes {
-        margin-top: 20px;
-    }
-    .botones-estudiantes button {
-        margin: 10px;
-        padding: 12px 18px;
-        border-radius: 8px;
-        border: none;
 </body>
 </html>
