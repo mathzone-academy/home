@@ -91,3 +91,39 @@ header .logo {
 .recursos .btn {
     margin: 10px 5px;       /* separa los botones */
 }
+.students-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.students-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.student-box {
+    background-color: #6A1B9A; /* morado elegante */
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-box:hover {
+    background-color: #4A148C;
+    transform: translateY(-4px);
+}
