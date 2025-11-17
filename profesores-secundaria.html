@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores - Secundaria - Mathzone</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Verificación de contraseña -->
+    <script>
+        const password = "12342025"; // define tu contraseña
+        const userPassword = prompt("Ingrese la contraseña para Secundaria:");
 
+        if(userPassword !== password){
+            alert("Contraseña incorrecta. Redirigiendo al área de Profesores.");
+            window.location.href = "profesores.html"; // redirige si es incorrecta
+        }
+    </script>
+
+    <!-- Header -->
+    <header>
+        <img src="images/logo mathzone 2.png" alt="Logo Mathzone" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="estudiantes.html">Estudiantes</a>
+            <a href="profesores.html" class="active">Profesores</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="profesores">
+        <h1>Profesores - Secundaria</h1>
+        <p>Bienvenido, profesor de Secundaria. Haga clic en un curso para ver sus temas.</p>
+
+        <section class="recursos">
+            <!-- Botón Aritmética -->
+            <button class="btn" onclick="mostrarTemas('aritmetica')">Aritmética</button>
+            <ul id="aritmetica" class="temas" style="display:none;">
+                <li>Conjuntos Numéricos I</li>
+                <li>Conjuntos Numéricos II</li>
+                <li>Numeración I</li>
+                <li>Numeración II</li>
+                <li>Operaciones Combinadas</li>
+                <li>Potenciación y Radicación</li>
+                <li>Complemento Aritmético</li>
+                <li>Divisibilidad</li>
+                <li>Números Primos y Compuestos (PESI)</li>
+                <li>MCM y MCD</li>
+                <li>Concepto de las Fracciones</li>
+                <li>Operaciones con Fracciones</li>
+                <li>Conversión de Fracción a Decimal</li>
+                <li>Clasificación de Decimales</li>
+                <li>Promedios (Aritmético, Geométrico y Armónico)</li>
+                <li>Razones</li>
+                <li>Proporciones</li>
+                <li>Series de Razones Equivalentes</li>
+                <li>Magnitudes Proporcionales</li>
+                <li>Regla de 3 Simple</li>
+                <li>Regla de 3 Compuesta</li>
+                <li>Reparto Proporcional</li>
+                <li>Porcentajes</li>
+                <li>Aumentos y Descuentos Sucesivos</li>
+                <li>Regla de Interés Simple I</li>
+                <li>Regla de Interés Simple II</li>
+                <li>Aplicaciones Comerciales</li>
+                <li>Regla de Mezcla</li>
+                <li>Lógica Proporcional I</li>
+                <li>Lógica Proporcional II</li>
+                <li>Lógica Proporcional III</li>
+                <li>Lógica Proporcional IV</li>
+            </ul>
+
+            <!-- Botón Álgebra -->
+            <button class="btn" onclick="mostrarTemas('algebra')">Álgebra</button>
+            <ul id="algebra" class="temas" style="display:none;">
+                <li>Teoría de Exponentes I</li>
+                <li>Teoría de Exponentes II</li>
+                <li>Polinomios I</li>
+                <li>Polinomios II</li>
+                <li>Valor Numérico</li>
+                <li>Reducción de Términos Semejantes</li>
+                <li>Adición y Sustracción de Polinomios</li>
+                <li>Multiplicación de Polinomios</li>
+                <li>División de Polinomios I</li>
+                <li>División de Polinomios II</li>
+                <li>División de Polinomios III</li>
+                <li>Teorema del Resto</li>
+                <li>Productos Notables I</li>
+                <li>Productos Notables II</li>
+                <li>Factorización I</li>
+                <li>Factorización II</li>
+                <li>Factorización III</li>
+                <li>Factorización IV</li>
+                <li>Ecuaciones de Primer Grado I</li>
+                <li>Ecuaciones de Primer Grado II</li>
+                <li>Sistema de Ecuaciones I</li>
+                <li>Sistema de Ecuaciones II</li>
+                <li>Ecuaciones de Segundo Grado I</li>
+                <li>Ecuaciones de Segundo Grado II</li>
+                <li>El Discriminante</li>
+                <li>Radicales I</li>
+                <li>Radicales II</li>
+                <li>Inecuaciones Lineales</li>
+                <li>Inecuaciones Cuadráticas</li>
+                <li>Ecuaciones Exponenciales</li>
+                <li>Números Imaginarios I</li>
+                <li>Números Imaginarios II</li>
+            </ul>
+
+            <!-- Botón Geometría -->
+            <button class="btn" onclick="mostrarTemas('geometria')">Geometría</button>
+            <ul id="geometria" class="temas" style="display:none;">
+                <li>Segmentos</li>
+                <li>Ángulos</li>
+                <li>Ángulos Complementarios y Suplementarios</li>
+                <li>Propiedades y Clasificación de los Triángulos</li>
+                <li>Líneas Notables de los Triángulos</li>
+                <li>Triángulos Notables</li>
+                <li>Propiedades Especiales de Triángulos Isósceles y Equilátero</li>
+                <li>Polígonos I</li>
+                <li>Polígonos II</li>
+                <li>Cuadriláteros</li>
+                <li>Paralelogramos Especiales y Sus Propiedades</li>
+                <li>Ángulos Asociados a la Circunferencia</li>
+                <li>Líneas Asociadas a la Circunferencia</li>
+                <li>El Círculo</li>
+                <li>Áreas de Regiones Triangulares</li>
+                <li>Áreas de Regiones Cuadrangulares</li>
+                <li>Área de Polígonos Regulares</li>
+                <li>Área de un Círculo</li>
+                <li>Área de Regiones Compuestas</li>
+                <li>Área de Regiones Sombreadas</li>
+                <li>Semejanza de Triángulos</li>
+                <li>Relaciones Métricas de los Triángulos</li>
+                <li>Líneas y Planos en el Espacio</li>
+                <li>Ángulos Diedros</li>
+                <li>El Prisma y Sus Áreas</li>
+                <li>La Pirámide y Sus Áreas</li>
+                <li>El Cono y Sus Áreas</li>
+                <li>El Cilindro y Sus Áreas</li>
+                <li>Volumen del Prisma</li>
+                <li>Volumen de la Pirámide</li>
+                <li>Volumen del Cono</li>
+                <li>Volumen del Cilindro</li>
+            </ul>
+
+            <!-- Botón Trigonometría -->
+            <button class="btn" onclick="mostrarTemas('trigonometria')">Trigonometría</button>
+            <ul id="trigonometria" class="temas" style="display:none;">
+                <li>Ángulo Trigonométrico</li>
+                <li>Sistema De Medición Angular I</li>
+                <li>Sistema de Medición Angular II</li>
+                <li>Sector Circular I</li>
+                <li>Sector Circular II</li>
+                <li>Teorema de Pitágoras</li>
+                <li>Razones Trigonométricas De Un Ángulo Agudo</li>
+                <li>Razones Trigonométricas de Ángulos Notables de 45°</li>
+                <li>R.T de Ángulos Notables de 30° y 60°</li>
+                <li>R.T de Ángulos Notables de 53° y 37°</li>
+                <li>R.T de Ángulos Notables de 74° y 16°</li>
+                <li>Resolución de Ángulos Notables I</li>
+                <li>Resolución de Ángulos Notables II</li>
+                <li>Propiedades de las R.T</li>
+                <li>Resolución de Triángulos Rectángulos</li>
+                <li>Geometría Analítica I</li>
+                <li>Geometría Analítica II</li>
+                <li>Geometría Analítica III</li>
+                <li>Geometría Analítica IV</li>
+                <li>Ángulos Verticales</li>
+                <li>R.T En Posición Normal I</li>
+                <li>R.T En Posición Normal II</li>
+                <li>R.T En Posición Normal III</li>
+                <li>Reducción Al Primer Cuadrante I</li>
+                <li>Reducción Al Primer Cuadrante II</li>
+                <li>Circunferencia Trigonométrica</li>
+                <li>Identidades Trigonométricas I</li>
+                <li>Identidades Trigonométricas II</li>
+                <li>Ángulos Compuestos I</li>
+                <li>Ángulos Compuestos II</li>
+                <li>Ángulo Doble I</li>
+                <li>Ángulo Doble II</li>
+            </ul>
+
+            <!-- Botón RM -->
+            <button class="btn" onclick="mostrarTemas('rm')">Razonamiento Matemático</button>
+            <ul id="rm" class="temas" style="display:none;">
+                <li>Juegos de Ingenio</li>
+                <li>Psicotécnico</li>
+                <li>Relaciones de Tiempo y Parentesco</li>
+                <li>Ordenamiento Lineal y Circular</li>
+                <li>Cuadro de Decisiones</li>
+                <li>Cuadrados Mágicos</li>
+                <li>Conteo de Figuras</li>
+                <li>Inducción Matemática</li>
+                <li>Deducción Matemática</li>
+                <li>Operadores Matemáticos</li>
+                <li>Sucesiones Aritméticas</li>
+                <li>Sucesiones Geométricas</li>
+                <li>Interpretación de Enunciados I</li>
+                <li>Interpretación de Enunciados II</li>
+                <li>Sumas Notables</li>
+                <li>Cuatro Operaciones</li>
+                <li>Cronometría I</li>
+                <li>Cronometría II</li>
+                <li>Analogías Numéricas</li>
+                <li>Distribuciones Numéricas</li>
+                <li>Conteo de Cubos</li>
+                <li>Problemas Con Porcentajes</li>
+                <li>Problemas Sobre Móviles</li>
+                <li>Análisis a los Gráficos Estadísticos</li>
+                <li>Tabla de Distribuciones con Frecuencias</li>
+                <li>Tabla de Distribuciones de Datos Agrupados</li>
+                <li>Histograma y Polígonos de Frecuencia</li>
+                <li>Probabilidades</li>
+                <li>Análisis Combinatorio I</li>
+                <li>Análisis Combinatorio II</li>
+                <li>Cálculo de Perímetros</li>
+                <li>Cálculo de Áreas</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function mostrarTemas(id) {
+            const lista = document.getElementById(id);
+            lista.style.display = lista.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
