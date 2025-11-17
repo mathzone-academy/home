@@ -71,3 +71,23 @@ main.home p {
 .btn:hover {
     background-color: #805AD5; /* Morado más claro al pasar el mouse */
 }
+/* Centrar el contenido principal */
+main.profesores {
+    text-align: center;      /* centra texto y botones */
+    max-width: 800px;        /* limita ancho */
+    margin: 0 auto;          /* centra el bloque horizontalmente */
+    padding: 20px;
+}
+
+/* Logo del header */
+header .logo {
+    width: 150px;           /* tamaño del logo */
+    height: auto;
+    display: block;         /* para poder centrarlo si quieres */
+    margin: 0 auto;         /* centra logo horizontalmente */
+}
+
+/* Botones de cursos */
+.recursos .btn {
+    margin: 10px 5px;       /* separa los botones */
+}
