@@ -3,36 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profesores - Mathzone (Primaria)</title>
+    <title>Área de Profesores - Mathzone</title>
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Estilo compacto para listas de temas */
-        main.profesores .temas {
-            list-style-type: disc; /* viñetas */
-            padding-left: 20px;    /* menos espacio a la izquierda */
-            margin: 10px 0 20px 0;
-            text-align: left;
-        }
-
-        main.profesores .temas li {
-            margin-bottom: 2px;    /* menos espacio vertical entre items */
-            line-height: 1.2em;
-        }
-    </style>
 </head>
 <body>
-    <!-- Verificación de contraseña -->
-    <script>
-        const password = "12342025"; // define tu contraseña
-        const userPassword = prompt("Ingrese la contraseña de profesores:");
-
-        if(userPassword !== password){
-            alert("Contraseña incorrecta. Redirigiendo al inicio.");
-            window.location.href = "index.html"; // redirige si es incorrecta
-        }
-    </script>
-
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <img src="images/logo mathzone 2.png" alt="Logo Mathzone" class="logo">
         <nav>
@@ -43,170 +18,14 @@
         </nav>
     </header>
 
-    <!-- Contenido principal -->
-    <main class="profesores">
-        <h1>Área de Profesores – Primaria</h1>
-        <p>Bienvenido, profesor de Mathzone. Seleccione un curso para ver los temas:</p>
+    <main class="students-container">
+        <h1>Área de Profesores</h1>
+        <p>Seleccione un nivel para ingresar:</p>
 
-        <section class="recursos">
-
-            <!-- Botón Razonamiento Matemático -->
-            <button class="btn" onclick="mostrarTemas('rm')">Razonamiento Matemático</button>
-            <ul id="rm" class="temas" style="display:none;">
-                <li>Noción de Conjuntos I</li>
-                <li>Noción de Conjuntos II (Determinación por Extensión y Comprensión)</li>
-                <li>Clases De Conjuntos</li>
-                <li>Operaciones con Conjuntos: Unión e Intersección</li>
-                <li>Relación de Pertenencia y No Pertenencia</li>
-                <li>Resolución de Problemas de Conjuntos</li>
-                <li>Psicotécnico</li>
-                <li>Sucesiones Numéricas Ascendentes y Descendentes</li>
-                <li>Sucesiones Alfanuméricas</li>
-                <li>Analogías Numéricas</li>
-                <li>Distribuciones Numéricas</li>
-                <li>Criptograma Numérico de Adición y Sustracción</li>
-                <li>Criptograma Numérico de Multiplicación</li>
-                <li>Minisudoku de Números</li>
-                <li>Pirámide Numérica de Multiplicación</li>
-                <li>Operadores Matemáticos Sin Tabla</li>
-                <li>Operadores Matemáticos Con Tabla</li>
-                <li>Falsa Suposición</li>
-                <li>Ordenamiento Lineal Horizontal</li>
-                <li>Ordenamiento Lineal Vertical</li>
-                <li>Conteo de Segmentos</li>
-                <li>Conteo de Ángulos</li>
-                <li>Conteo de Triángulos</li>
-                <li>Conteo de Cuadriláteros</li>
-                <li>Estadística I: Gráfico de Barras</li>
-                <li>Estadística II: Gráfico Lineal</li>
-                <li>Estadística III: Pictogramas</li>
-                <li>Juegos de Ingenio</li>
-                <li>Conteo de Cubos</li>
-                <li>Perímetros de Figuras</li>
-                <li>Fracciones</li>
-                <li>Planteo de Ecuaciones</li>
-            </ul>
-
-            <!-- Botón Álgebra -->
-            <button class="btn" onclick="mostrarTemas('algebra')">Álgebra</button>
-            <ul id="algebra" class="temas" style="display:none;">
-                <li>Encuentra El Número</li>
-                <li>¿Qué Valor Tiene? I</li>
-                <li>¿Qué Valor Tiene? II</li>
-                <li>Remplaza El Valor</li>
-                <li>Introducción A Las Ecuaciones</li>
-                <li>Desarrollo de Ecuaciones I</li>
-                <li>Desarrollo de Ecuaciones II</li>
-                <li>Desarrollo de Ecuaciones III</li>
-                <li>Desarrollo de Ecuaciones IV</li>
-                <li>Desarrollo de Ecuaciones V</li>
-                <li>Desarrollo de Ecuaciones VI</li>
-                <li>Desarrollo de Ecuaciones VII</li>
-                <li>Desarrollo de Ecuaciones VIII</li>
-                <li>Desarrollo de Ecuaciones IX</li>
-                <li>Desarrollo de Ecuaciones X</li>
-                <li>Identificación De Un Término Algebraico</li>
-                <li>Identificación De Términos Semejantes</li>
-                <li>Comparación de Términos Semejantes</li>
-                <li>Agrupación De Términos Semejantes</li>
-                <li>Operaciones Con Términos Semejantes I</li>
-                <li>Operaciones Con Términos Semejantes II</li>
-                <li>Reducción de Términos Semejantes</li>
-                <li>Planteo de Ecuaciones I</li>
-                <li>Planteo de Ecuaciones II</li>
-                <li>Introducción A Las Inecuaciones</li>
-                <li>Ejercicios Con Inecuaciones I</li>
-                <li>Ejercicios Con Inecuaciones II</li>
-                <li>Polinomios</li>
-                <li>Grado Relativo De Un Polinomio</li>
-                <li>Grado Absoluto De Un Polinomio</li>
-                <li>Teoría De Exponentes I</li>
-                <li>Teoría De Exponentes II</li>
-            </ul>
-
-            <!-- Botón Geometría -->
-            <button class="btn" onclick="mostrarTemas('geometria')">Geometría</button>
-            <ul id="geometria" class="temas" style="display:none;">
-                <li>El Punto</li>
-                <li>La Línea</li>
-                <li>El Segmento</li>
-                <li>Líneas Paralelas</li>
-                <li>Líneas Perpendiculares</li>
-                <li>Figuras Geométricas</li>
-                <li>Vértices, Lados y Ángulos De Figuras Geométricas</li>
-                <li>Figuras Geométricas En La Naturaleza</li>
-                <li>Posición Relativa (Nociones de interior, exterior, arriba y abajo)</li>
-                <li>Ángulos II: Tipos de Ángulos</li>
-                <li>Clasificación De Triángulos I (Escaleno, Equilátero e Isósceles)</li>
-                <li>Clasificación De Triángulos II (Rectángulo, Acutángulo y Obtusángulo)</li>
-                <li>Propiedades De Los Triángulos I (Suma de Ángulos Internos)</li>
-                <li>Propiedades De Los Triángulos II (Suma de Ángulos Externos)</li>
-                <li>Propiedades De Los Triángulos III (Medida De Un Ángulo Externo)</li>
-                <li>Clasificación de Cuadriláteros</li>
-                <li>Polígonos Regulares e Irregulares</li>
-                <li>Nombres De Polígonos</li>
-                <li>Diagonales</li>
-                <li>El Perímetro</li>
-                <li>El Perímetro En Polígonos Regulares</li>
-                <li>El Área</li>
-                <li>El Área Del Rectángulo</li>
-                <li>El Área Del Triángulo</li>
-                <li>El Área De Un Cuadrado</li>
-                <li>Introducción Al Número Pi</li>
-                <li>La Circunferencia y Su Perímetro</li>
-                <li>El Radio y Diámetro De Un Círculo</li>
-                <li>Área De Un Círculo</li>
-                <li>Sólidos Geométricos (Figuras 3D)</li>
-                <li>Geometría Analítica (Uso de Las Coordenadas X y Y en el Plano Cartesiano)</li>
-                <li>El Teorema De Pitágoras</li>
-            </ul>
-
-            <!-- Botón Aritmética -->
-            <button class="btn" onclick="mostrarTemas('aritmetica')">Aritmética</button>
-            <ul id="aritmetica" class="temas" style="display:none;">
-                <li>Conteo, Lectura y Escritura de Números</li>
-                <li>Valor Posicional (Unidades, Decenas y Centenas)</li>
-                <li>Comparación de Números</li>
-                <li>Composición y Descomposición de Números</li>
-                <li>Números Pares e Impares</li>
-                <li>Números Romanos</li>
-                <li>Introducción y ejercicios de Adición (de 1 y 2 cifras)</li>
-                <li>Propiedades de la Adición</li>
-                <li>Introducción y ejercicios de Sustracción</li>
-                <li>Ejercicios con Sustracciones de 2 cifras</li>
-                <li>Problemas de Adición y Sustracción</li>
-                <li>Multiplicación de 0 y 1</li>
-                <li>Multiplicación de 2 y 3</li>
-                <li>Multiplicación de 4 y 5</li>
-                <li>Multiplicación de 6 y 7</li>
-                <li>Multiplicación de 8 y 9</li>
-                <li>Técnica de Multiplicación de 10, 100 y 1000</li>
-                <li>Introducción a la División (mitad y tercia)</li>
-                <li>Ejercicios de División</li>
-                <li>Problemas con División</li>
-                <li>Divisiones Inexactas</li>
-                <li>Resolución de Problemas</li>
-                <li>Introducción a las Fracciones</li>
-                <li>Suma y Resta De Fracciones</li>
-                <li>Multiplicación y División de Fracciones</li>
-                <li>Comparación y Ordenamiento de Fracciones</li>
-                <li>Introducción a los Decimales</li>
-                <li>Lectura y Escritura de Decimales</li>
-                <li>Suma y Resta de Decimales</li>
-                <li>Multiplicación y División de Decimales</li>
-                <li>Introducción a Los Números Enteros</li>
-                <li>Operaciones Combinadas</li>
-            </ul>
-
-        </section>
+        <div class="students-grid">
+            <a href="profesores-primaria.html" class="student-box">Primaria</a>
+            <a href="profesores-secundaria.html" class="student-box">Secundaria</a>
+        </div>
     </main>
-
-    <!-- Script para mostrar/ocultar temas -->
-    <script>
-        function mostrarTemas(id) {
-            const lista = document.getElementById(id);
-            lista.style.display = lista.style.display === "none" ? "block" : "none";
-        }
-    </script>
 </body>
 </html>
