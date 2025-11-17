@@ -1,33 +1,73 @@
+/* Fuente general */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #F7F7F7;
+    background-color: #F7F7F7; /* Fondo claro */
     color: #1A202C;
 }
 
+/* Header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #A45EE5; /* morado principal */
+    background-color: #6B46C1; /* Morado principal */
     color: white;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
-a {
-    color: #710193; /* morado claro */
+.logo {
+    width: 150px; /* Ajusta tamaño del logo */
+    height: auto;
+}
+
+nav a {
+    color: #E9D8FD; /* Morado claro */
     text-decoration: none;
     margin-left: 20px;
+    font-weight: 600;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-.logo {
-    width: 200px;
-    height: auto;
+/* Main de inicio */
+main.home {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #F7F7F7, #E9D8FD20);
 }
 
+main.home h1 {
+    font-size: 48px;
+    color: #6B46C1;
+    margin-bottom: 20px;
+}
+
+main.home p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Botones de inicio */
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background-color: #6B46C1;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #805AD5; /* Morado más claro al pasar el mouse */
+}
