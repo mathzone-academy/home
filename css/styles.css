@@ -165,17 +165,32 @@ main.home p {
 /* Redes sociales en contacto */
 .contacto-links {
     margin-top: 25px;
-    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+/* Botones de redes */
 .contacto-links a {
-    display: block;         /* cada enlace en su línea */
-    color: #4C1D95;
-    text-decoration: none;
-    margin: 8px 0;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;            /* tamaño del botón */
+    height: 70px;
+    background: white;
+    border-radius: 50%;     /* forma circular */
+    box-shadow: 0 0 10px #00000030;
+    transition: transform 0.2s;
+}
+
+/* Íconos dentro del botón */
+.contacto-links img {
+    width: 35px;            /* ajusta el tamaño de los logos aquí */
+    height: 35px;
+    object-fit: contain;
 }
 
 .contacto-links a:hover {
-    text-decoration: underline;
+    transform: scale(1.1);
 }
