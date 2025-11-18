@@ -11,7 +11,7 @@ header {
     display: flex;
     align-items: center;       /* centra verticalmente logo y nav */
     justify-content: space-between;
-    background-image: url('../images/cuadro-textura.jpg');
+    background-image: url('../images/header.png');
     background-repeat: no-repeat;
     background-size: cover;    /* cubre el área del header */
     background-position: center;
