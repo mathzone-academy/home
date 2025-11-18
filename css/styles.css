@@ -120,8 +120,7 @@ main.home p {
     display: none;
     margin-top: 10px;
     margin-bottom: 25px;
-    background: url('/images/cuadro-textura.jpg') no-repeat center center;
-    background-size: cover;
+    background: #ffffff; /* Cambiado de la textura a blanco */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 0px 10px #00000020;
