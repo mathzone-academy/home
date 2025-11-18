@@ -12,11 +12,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('../images/cuadro-textura.jpg') repeat;
-    background-size:auto
+    background-image: url('../images/cuadro-textura.jpg');
+    background-repeat: repeat;
+    background-size: auto;
     color: white;
     padding: 30px 40px;
 }
+
 /* Logo del header */
 header .logo {
     height: 150px;
@@ -34,23 +36,6 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}
-
-/* Responsivo del header */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    header .logo {
-        height: 100px;
-    }
-
-    nav a {
-        margin: 10px;
-    }
 }
 
 /* Main de inicio */
@@ -76,6 +61,7 @@ main.home p {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -103,6 +89,7 @@ main.home p {
     margin-bottom: 30px;
 }
 
+/* Grid de cuadros principales */
 .students-grid {
     display: flex;
     justify-content: center;
@@ -173,5 +160,10 @@ main.home p {
     .students-grid {
         flex-direction: column;
         align-items: center;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: 15px;
     }
 }
