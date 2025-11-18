@@ -190,7 +190,24 @@ main.home p {
     height: 35px;
     object-fit: contain;
 }
+/* ICONOS DE REDES EN CONTACTO */
+.social-icons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
 
+.icon-btn img {
+    width: 55px;        /* tamaño más pequeño */
+    height: 55px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.icon-btn img:hover {
+    transform: scale(1.18);   /* agranda suavemente al pasar el cursor */
+}
 .contacto-links a:hover {
     transform: scale(1.1);
 }
