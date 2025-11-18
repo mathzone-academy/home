@@ -7,24 +7,22 @@ body {
     color: #1A202C;
 }
 
-/* Header - asegura que el logo y el menú se alineen bien */
+/* Header */
 header {
     display: flex;
-    align-items: center;      /* centra verticalmente logo y nav */
+    align-items: center;
     justify-content: space-between;
     background-color: #4C1D95; /* morado principal */
     color: white;
-    padding: 30px 40px;       /* más espacio para el logo */
+    padding: 30px 40px;
 }
 
-/* Logo del header - alto proporcional y centrado */
 header .logo {
-    height: 150px;   /* alto visible en el header */
-    width: auto;     /* mantiene la proporción */
+    height: 150px;
+    width: auto;
     display: block;
 }
 
-/* Navegación */
 nav a {
     color: #E9D8FD; /* Morado claro */
     text-decoration: none;
@@ -72,20 +70,7 @@ main.home p {
 }
 
 .btn:hover {
-    background-color: #805AD5; /* Morado más claro al pasar el mouse */
-}
-
-/* Centrar el contenido principal de profesores */
-main.profesores {
-    text-align: center;      /* centra texto y botones */
-    max-width: 800px;        /* limita ancho */
-    margin: 0 auto;          /* centra el bloque horizontalmente */
-    padding: 20px;
-}
-
-/* Botones de cursos */
-.recursos .btn {
-    margin: 10px 5px;       /* separa los botones */
+    background-color: #805AD5;
 }
 
 /* Contenedores de estudiantes */
@@ -100,15 +85,18 @@ main.profesores {
 }
 
 .students-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    max-width: 900px;
+    flex-wrap: wrap;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Cuadros con textura */
 .student-box {
-    background-color: #6A1B9A; /* morado elegante */
+    background: url('../images/cuadro-textura.jpg') no-repeat center center;
+    background-size: cover;
     color: white;
     padding: 25px;
     border-radius: 12px;
@@ -119,81 +107,53 @@ main.profesores {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.student-box:hover {
-    background-color: #4A148C;
-    transform: translateY(-4px);
-}
-
-/* Ajustes responsivos para móviles */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;   /* logo arriba, nav debajo */
-        align-items: center;
-        padding: 20px;
-    }
-
-    header .logo {
-        height: 100px; /* se reduce en móviles */
-    }
-
-    nav a {
-        margin: 10px; /* más espacio entre enlaces */
-    }
-
-    .students-grid {
-        grid-template-columns: 1fr; /* una columna en móviles */
-    }
-}
-.temas {
-    list-style-position: inside; /* las viñetas quedan cerca del texto */
-    padding: 0;                  /* elimina padding predeterminado */
-    margin: 10px auto;           /* centra la lista */
-    text-align: left;            /* texto alineado a la izquierda dentro de la lista */
-    max-width: 800px;            /* opcional: limita ancho */
-}
-
-.temas li {
-    margin: 5px 0;               /* espacio entre items */
-}
-.students-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.student-box-wrapper {
+    cursor: pointer;
     text-align: center;
 }
 
-.dropdown-list {
-    display: none;
-    text-align: left;
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
+.student-box:hover {
+    transform: translateY(-4px);
 }
+
+/* Listas desplegables */
 .hidden-list {
     display: none;
-    margin-top: -5px;
+    margin-top: 10px;
     margin-bottom: 25px;
-    background: #ffffff;
-    padding: 15px;
+    background: url('../images/cuadro-textura.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 0px 10px #00000020;
     list-style-type: disc;
-}
-
-/* Asegura que la lista ocupe todo el ancho del grid */
-.full-width {
-    grid-column: 1 / -1;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hidden-list li {
     margin: 6px 0;
 }
 
-.student-box {
-    cursor: pointer;
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    header .logo {
+        height: 100px;
+    }
+
+    nav a {
+        margin: 10px;
+    }
+
+    .students-grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
