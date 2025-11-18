@@ -162,3 +162,20 @@ main.home p {
         gap: 15px;
     }
 }
+/* Redes sociales en contacto */
+.contacto-links {
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.contacto-links a {
+    display: block;         /* cada enlace en su línea */
+    color: #4C1D95;
+    text-decoration: none;
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+.contacto-links a:hover {
+    text-decoration: underline;
+}
