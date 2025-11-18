@@ -7,18 +7,31 @@ body {
     color: #1A202C;
 }
 
-/* Header con textura uniforme */
 header {
     display: flex;
-    align-items: center;
+    align-items: center;       /* centra verticalmente logo y nav */
     justify-content: space-between;
     background-image: url('../images/cuadro-textura.jpg');
     background-repeat: no-repeat;
-    background-size: cover;       /* cubre todo el header */
+    background-size: cover;    /* cubre el área del header */
     background-position: center;
-    padding: 30px 40px;
-    min-height: 180px;
+    color: white;
+    padding: 20px 40px;        /* reduce espacio superior e inferior */
+    min-height: 120px;         /* asegura altura suficiente para logo y nav */
     box-sizing: border-box;
+}
+
+header .logo {
+    height: 80px;              /* ajusta para que no sea gigante */
+    width: auto;
+}
+
+nav a {
+    color: #E9D8FD;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    z-index: 10;               /* asegura que los enlaces estén encima del fondo */
 }
 /* Main de inicio */
 main.home {
