@@ -12,49 +12,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('../images/cuadro-textura.jpg'); /* tu imagen */
-    background-repeat: repeat;       /* se repite en ambas direcciones */
-    background-size: auto;           /* tamaño original de la imagen */
-    height: 180px;                   /* altura fija para que la imagen se repita bien */
-    padding: 0 40px;                 /* elimina padding vertical para que no genere espacio */
-    box-sizing: border-box;          /* incluye padding dentro de la altura */
-}
-
-/* Logo centrado verticalmente */
-header .logo {
-    height: 150px;
-    width: auto;
-}
-
-/* Navegación */
-nav a {
-    color: #E9D8FD;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 600;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Responsivo */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        height: auto;       /* que crezca según contenido */
-        padding: 20px;
-    }
-
-    header .logo {
-        height: 100px;
-        margin-bottom: 10px;
-    }
-
-    nav a {
-        margin: 10px;
-    }
+    background-image: url('../images/cuadro-textura.jpg');
+    background-repeat: repeat;        /* repite la textura */
+    background-size: auto;            /* tamaño original */
+    background-position: top left;    /* evita desplazamiento */
+    padding: 0 40px;                  /* solo padding horizontal */
+    min-height: 180px;                /* deja espacio para logo grande */
+    box-sizing: border-box;
 }
 /* Main de inicio */
 main.home {
