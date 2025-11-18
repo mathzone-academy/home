@@ -13,11 +13,11 @@ header {
     align-items: center;
     justify-content: space-between;
     background-image: url('../images/cuadro-textura.jpg');
-    background-repeat: repeat;        /* repite la textura */
-    background-size: auto;            /* tamaño original */
-    background-position: top left;    /* evita desplazamiento */
-    padding: 0 40px;                  /* solo padding horizontal */
-    min-height: 180px;                /* deja espacio para logo grande */
+    background-repeat: no-repeat;
+    background-size: cover;       /* cubre todo el header */
+    background-position: center;
+    padding: 30px 40px;
+    min-height: 180px;
     box-sizing: border-box;
 }
 /* Main de inicio */
