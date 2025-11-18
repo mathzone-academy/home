@@ -7,29 +7,28 @@ body {
     color: #1A202C;
 }
 
-/* Header con textura */
+/* Header con textura uniforme */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('../images/cuadro-textura.jpg');
-    background-repeat: repeat;
-    background-size: auto;
-    background-color: transparent;
-    color: white;
-    padding: 30px 40px;
+    background-image: url('../images/cuadro-textura.jpg'); /* tu imagen */
+    background-repeat: repeat;       /* se repite en ambas direcciones */
+    background-size: auto;           /* tamaño original de la imagen */
+    height: 180px;                   /* altura fija para que la imagen se repita bien */
+    padding: 0 40px;                 /* elimina padding vertical para que no genere espacio */
+    box-sizing: border-box;          /* incluye padding dentro de la altura */
 }
 
-/* Logo del header */
+/* Logo centrado verticalmente */
 header .logo {
     height: 150px;
     width: auto;
-    display: block;
 }
 
 /* Navegación */
 nav a {
-    color: #E9D8FD; /* Morado claro */
+    color: #E9D8FD;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 600;
@@ -39,6 +38,24 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;       /* que crezca según contenido */
+        padding: 20px;
+    }
+
+    header .logo {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        margin: 10px;
+    }
+}
 /* Main de inicio */
 main.home {
     text-align: center;
