@@ -3,102 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primaria – Mathzone</title>
-
-    <!-- ENLAZA TU CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- ESTILOS EXTRA PARA EL DESPLEGABLE -->
-    <style>
-        .hidden-list {
-            display: none;
-            background: white;
-            padding: 10px 15px;
-            border-radius: 10px;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-        }
-
-        .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .students-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .student-box {
-            background: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .student-box:hover {
-            background: #e8e8e8;
-        }
-    </style>
+    <title>Primaria - Mathzone</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
-<header>
-    <img src="img/logo.png" class="logo" alt="Logo">
-</header>
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo mathzone 2.png" alt="Logo Mathzone" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="estudiantes.html" class="active">Estudiantes</a>
+            <a href="profesores.html">Profesores</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
 
-<main class="students-container">
-    <h1>Primaria</h1>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="students-container">
+        <h1>Primaria</h1>
 
-    <div class="students-grid">
-        
-        <!-- BENEFICIOS -->
-        <div class="student-box" onclick="toggleList('beneficios-list')">
-            <h3>Beneficios</h3>
+        <div class="students-grid">
+
+            <!-- BENEFICIOS -->
+            <div class="student-box" onclick="toggleList('beneficios-list')">
+                <h3>Beneficios</h3>
+            </div>
+            <ul id="beneficios-list" class="hidden-list full-width">
+                <li>Enseñanza de calidad en matemáticas</li>
+                <li>Clases 100% virtuales</li>
+                <li>Precio: S/40 mensual</li>
+                <li>Descuentos si se unen más de 2 alumnos</li>
+                <li>Material de apoyo en PDF y libros digitales</li>
+                <li>Ejercicios prácticos y evaluaciones cortas</li>
+                <li>Comunidad de apoyo para resolver dudas</li>
+            </ul>
+
+            <!-- CURSOS -->
+            <div class="student-box" onclick="toggleList('cursos-list')">
+                <h3>Cursos</h3>
+            </div>
+            <ul id="cursos-list" class="hidden-list full-width">
+                <li>Álgebra</li>
+                <li>Aritmética</li>
+                <li>Razonamiento Matemático</li>
+                <li>Geometría</li>
+            </ul>
+
         </div>
+    </main>
 
-        <ul id="beneficios-list" class="hidden-list full-width">
-            <li>Enseñanza de calidad en matemáticas</li>
-            <li>Clases 100% virtuales</li>
-            <li>Precio: S/40 mensual</li>
-            <li>Descuentos para grupos de 3 o más alumnos</li>
-            <li>Material de apoyo en PDF y libros digitales</li>
-            <li>Ejercicios prácticos y evaluaciones</li>
-            <li>Comunidad para resolver dudas</li>
-        </ul>
-
-        <!-- CURSOS -->
-        <div class="student-box" onclick="toggleList('cursos-list')">
-            <h3>Cursos</h3>
-        </div>
-
-        <ul id="cursos-list" class="hidden-list full-width">
-            <li>Aritmética</li>
-            <li>Álgebra básica</li>
-            <li>Razonamiento Matemático</li>
-            <li>Geometría básica</li>
-        </ul>
-
-    </div>
-</main>
-
-<script>
-function toggleList(id) {
-    const list = document.getElementById(id);
-    const isVisible = list.style.display === "block";
-
-    // Cerrar todas las listas
-    document.querySelectorAll('.hidden-list').forEach(el => el.style.display = "none");
-
-    // Abrir solo la seleccionada
-    if (!isVisible) {
-        list.style.display = "block";
-    }
-}
-</script>
+    <!-- SCRIPT PARA ABRIR/CERRAR CUADROS -->
+    <script>
+        function toggleList(id) {
+            const list = document.getElementById(id);
+            list.style.display = list.style.display === "block" ? "none" : "block";
+        }
+    </script>
 
 </body>
 </html>
