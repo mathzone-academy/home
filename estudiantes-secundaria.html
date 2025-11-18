@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secundaria - Mathzone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function toggleList(id) {
+            const list = document.getElementById(id);
+            list.style.display = list.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
 
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo mathzone 2.png" alt="Logo Mathzone" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="estudiantes.html">Estudiantes</a>
+            <a href="profesores.html">Profesores</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="students-container">
+        <h1>Secundaria</h1>
+
+        <div class="students-grid">
+
+            <!-- BENEFICIOS -->
+            <div class="student-box" onclick="toggleList('beneficios-list')">
+                <h3>Beneficios</h3>
+            </div>
+
+            <ul id="beneficios-list" class="hidden-list full-width">
+                <li>Enseñanza de calidad en matemáticas</li>
+                <li>Clases 100% virtuales</li>
+                <li>Precio: S/40 mensual</li>
+                <li>Descuentos si se unen más de 2 alumnos</li>
+                <li>Material de apoyo en PDF y libros digitales</li>
+                <li>Ejercicios prácticos y evaluaciones cortas</li>
+                <li>Comunidad de apoyo para resolver dudas</li>
+            </ul>
+
+            <!-- CURSOS -->
+            <div class="student-box" onclick="toggleList('cursos-list')">
+                <h3>Cursos</h3>
+            </div>
+
+            <ul id="cursos-list" class="hidden-list full-width">
+                <li>Aritmética</li>
+                <li>Álgebra</li>
+                <li>Geometría</li>
+                <li>Trigonometría</li>
+                <li>Razonamiento Matemático</li>
+            </ul>
+
+        </div>
+    </main>
+
+</body>
+</html>
